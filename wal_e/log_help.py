@@ -117,7 +117,7 @@ class WalELogger(object):
             "time=%Y-%m-%dT%H:%M:%S.%f-00")
         pidEntry = "pid=" + str(os.getpid())
 
-        rest = sorted('='.join([unicode(k), unicode(v)])
+        rest = sorted('='.join([str(k), str(v)])
                       for (k, v) in d.items())
 
         return ' '.join([timeEntry, pidEntry] + rest)
